@@ -13,7 +13,6 @@ function Courses() {
           : "bg-zinc-900 text-white"
       }`}
     >
-      {/* Heading */}
       <div className="mb-12">
         <span className="rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-700">
           Learning Platform
@@ -33,7 +32,6 @@ function Courses() {
         </p>
       </div>
 
-      {/* Courses */}
       <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         {courses.map((course) => (
           <div
@@ -44,21 +42,19 @@ function Courses() {
                 : "border-zinc-700 bg-zinc-800"
             }`}
           >
-            {/* Top Banner */}
+
             <div className="h-2 bg-green-600" />
 
             <div className="p-6">
-              {/* Level */}
+
               <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">
                 {course.level}
               </span>
 
-              {/* Course Name */}
               <h2 className="mt-5 text-2xl font-bold">
                 {course.courseName}
               </h2>
 
-              {/* Description */}
               <p
                 className={`mt-4 leading-7 ${
                   theme === "light"
@@ -69,7 +65,6 @@ function Courses() {
                 {course.heading}
               </p>
 
-              {/* Footer */}
               <div className="mt-8 flex items-center justify-between border-t border-zinc-200 pt-5 dark:border-zinc-700">
                 <div>
                   <p className="text-sm text-zinc-500">

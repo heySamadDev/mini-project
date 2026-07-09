@@ -1,31 +1,9 @@
 import { useContext } from "react";
 import UserContext from "../context/userContext";
+import { stats } from "../utils/dashboardData";
 
 function Dashboard() {
   const { theme } = useContext(UserContext);
-
-  const stats = [
-    {
-      id: 1,
-      title: "Total Students",
-      value: "248",
-    },
-    {
-      id: 2,
-      title: "Active Courses",
-      value: "12",
-    },
-    {
-      id: 3,
-      title: "Instructors",
-      value: "8",
-    },
-    {
-      id: 4,
-      title: "Completed Courses",
-      value: "184",
-    },
-  ];
 
   return (
     <section
@@ -35,7 +13,6 @@ function Dashboard() {
           : "bg-zinc-900 text-white"
       }`}
     >
-      {/* Heading */}
       <div className="mb-10">
         <h1 className="text-4xl font-bold">
           Admin <span className="text-green-600">Dashboard</span>
@@ -50,7 +27,6 @@ function Dashboard() {
         </p>
       </div>
 
-      {/* Stats */}
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {stats.map((item) => (
           <div
@@ -76,7 +52,6 @@ function Dashboard() {
         ))}
       </div>
 
-      {/* Recent Activity */}
       <div
         className={`mt-10 rounded-xl border p-6 ${
           theme === "light"
@@ -84,22 +59,16 @@ function Dashboard() {
             : "border-zinc-700 bg-zinc-800"
         }`}
       >
-        <h2 className="text-2xl font-semibold">
-          Recent Activity
-        </h2>
+        <h2 className="text-2xl font-semibold">Recent Activity</h2>
 
         <div className="mt-6 space-y-4">
           <div className="flex items-center justify-between border-b border-zinc-200 pb-4 dark:border-zinc-700">
             <div>
-              <p className="font-medium">
-                New student enrolled in React.js
-              </p>
+              <p className="font-medium">New student enrolled in React.js</p>
 
               <p
                 className={`text-sm ${
-                  theme === "light"
-                    ? "text-zinc-500"
-                    : "text-zinc-400"
+                  theme === "light" ? "text-zinc-500" : "text-zinc-400"
                 }`}
               >
                 10 minutes ago
@@ -119,9 +88,7 @@ function Dashboard() {
 
               <p
                 className={`text-sm ${
-                  theme === "light"
-                    ? "text-zinc-500"
-                    : "text-zinc-400"
+                  theme === "light" ? "text-zinc-500" : "text-zinc-400"
                 }`}
               >
                 1 hour ago
@@ -135,15 +102,11 @@ function Dashboard() {
 
           <div className="flex items-center justify-between">
             <div>
-              <p className="font-medium">
-                JavaScript batch scheduled
-              </p>
+              <p className="font-medium">JavaScript batch scheduled</p>
 
               <p
                 className={`text-sm ${
-                  theme === "light"
-                    ? "text-zinc-500"
-                    : "text-zinc-400"
+                  theme === "light" ? "text-zinc-500" : "text-zinc-400"
                 }`}
               >
                 Yesterday
